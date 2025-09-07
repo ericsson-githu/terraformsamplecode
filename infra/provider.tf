@@ -7,9 +7,9 @@ terraform {
   }
 
   backend "azurerm" {
-    resource_group_name  = "Ramu_rg"   
-    storage_account_name = "ramupratap8791"                       
-    container_name       = "tfstate"                        
+    resource_group_name  = "uday-rg"   
+    storage_account_name = "terraformuday7231"                       
+    container_name       = "tfstatefile"                        
     key                  = "prod.tfstate"         
   }
 }
@@ -17,7 +17,7 @@ terraform {
 
 provider "azurerm" {
     features {}
-    subscription_id = "027bc23a-8a9d-41f9-b17f-65bf7ca72059"
+    subscription_id = "fbac4321-0f41-46f0-baea-f23a62385eb5"
   # Configuration options
 }
 
