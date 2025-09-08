@@ -23,13 +23,9 @@ jobs:
         uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.13.1   # ya latest
-      - name: List repo files
-        run: ls -R
       - name: Terraform Init
-        run: terraform init -backend-config="resource_group_name=uday-rg" `
-                             -backend-config="storage_account_name=terraformuday7231" `
-                             -backend-config="container_name=tfstatefile" `
-                             -backend-config="key=prod.tfstate"
-        working-directory: terraform-demo-1/infra
+        run: terraform init
+        working-directory: ./infra
+
   
      
