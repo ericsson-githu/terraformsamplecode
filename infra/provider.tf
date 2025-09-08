@@ -11,7 +11,7 @@ terraform {
   #     container_name       = ""
   #     key                  = ""
   #   }
-
+}
 
 provider "azurerm" {
     features {}
