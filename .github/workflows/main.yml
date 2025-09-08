@@ -6,7 +6,7 @@ permissions:
   contents: read
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: 'Az CLI login'
         uses: azure/login@v2
@@ -23,6 +23,9 @@ jobs:
         uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.13.1   # ya latest
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
       - name: Terraform Init
         run: terraform init
         working-directory: infra
