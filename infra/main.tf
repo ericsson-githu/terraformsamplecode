@@ -4,14 +4,16 @@ module "rg" {
   location = "central india"
 }
 
-module "sg1" {
+module "sg" {
   
     source                  = "../modules/storage_account"
-    sg                      = "mystorageaccount8uday"
+    sg                      = "mystorageaccount827"
     rg                      = "myResourceavi"
     location                = "central india"
     account_tier            = "Standard"
     account_replication_type = "LRS"
     }
+
+   
 
  
