@@ -10,7 +10,7 @@ terraform {
         # storage_account_name = "terraformuday7231"
         # container_name       = "tfstatefile"
         # key                  = "prod.tfstate"
-       }
+      # }
 }
 
 provider "azurerm" {
