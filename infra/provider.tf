@@ -5,11 +5,11 @@ terraform {
       version = "4.41.0"
     }
   }
-      backend "azurerm" {
-         resource_group_name  = "uday-rg"
-         storage_account_name = "terraformuday7231"
-         container_name       = "tfstatefile"
-         key                  = "prod.tfstate"
+    # backend "azurerm" {
+       #  resource_group_name  = "uday-rg"
+        # storage_account_name = "terraformuday7231"
+        # container_name       = "tfstatefile"
+        # key                  = "prod.tfstate"
        }
 }
 
