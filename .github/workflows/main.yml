@@ -34,12 +34,7 @@ jobs:
         working-directory: infra
   
       - name: Terraform Init
-        run: |
-          terraform init \
-            -backend-config="resource_group_name=uday-rg" \
-            -backend-config="storage_account_name=terraformuday7231" \
-            -backend-config="container_name=tfstatefile" \
-            -backend-config="key=prod.tfstate"
+        run: terraform init -backend-config="resource_group_name=uday-rg" -backend-config="storage_account_name=terraformuday7231" -backend-config="container_name=tfstatefile" -backend-config="key=prod.tfstate"
         working-directory: infra
 
       - name: Terraform Validate
