@@ -30,6 +30,6 @@ jobs:
                              -backend-config="storage_account_name=terraformuday7231" `
                              -backend-config="container_name=tfstatefile" `
                              -backend-config="key=prod.tfstate"
-        working-directory: ./infra
+        working-directory: terraform-demo-1/infra
   
      
