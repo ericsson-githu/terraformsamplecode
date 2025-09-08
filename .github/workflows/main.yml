@@ -30,6 +30,9 @@ jobs:
                              -backend-config="container_name=tfstatefile" `
                              -backend-config="key=prod.tfstate"
         working-directory: ./infra
+      - name: List repo files
+        run: ls -R
+
       
       - name: Terraform Plan
         run: terraform plan -out=tfplan
