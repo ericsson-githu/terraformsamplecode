@@ -23,12 +23,6 @@ jobs:
         uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.13.1   # ya latest
-
-      - name: Azure Login
-        uses: azure/login@v2
-        with:
-          creds: ${{ secrets.AZURE_SECRET }}
-          enable-AzPSSession: false
      
       - name: Terraform Init
         run: terraform init -backend-config="resource_group_name=uday-rg" `
