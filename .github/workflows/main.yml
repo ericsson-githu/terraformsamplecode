@@ -1,30 +1,19 @@
-name: CI
+name: Run Azure Login with OIDC
+on: [push]
 
-on:
-  pull_request:
-    branches:
-      - main
-  push:
-    branches:
-      - main      
- 
 permissions:
   id-token: write
   contents: read
-
 jobs:
-  terraform-init-plan:
-    runs-on: self-hosted
-    steps: 
-      - name: Checkout
-        uses: actions/checkout@v5.0.0
-      - name: Azure Login
-        uses: azure/login@v2.3.0
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Az CLI login'
+        uses: azure/login@v2
         with:
           client-id: dd1efe98-399e-4fb5-b5f4-2d0f0bfd525b
           tenant-id: 90eaef6b-3882-4c51-8467-1155649bc19d
           subscription-id: fbac4321-0f41-46f0-baea-f23a62385eb5
-          federated-token: true
    
 
       - name: Run Hello World
